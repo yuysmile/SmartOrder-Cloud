@@ -1,0 +1,411 @@
+[ 2017-09-08T08:52:54+08:00 ] 127.0.0.1 /cloud/index.php/Admin/login/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000759s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001020s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001062s ]
+NOTIC: [8] A session had already been started - ignoring session_start() C:\xampp\htdocs\Cloud\App\Admin\Controller\ComController.class.php 第 118 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000048s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000106s ]
+NOTIC: [8] Undefined variable: current C:\xampp\htdocs\Cloud\App\Runtime\Cache\Admin\f0f0edaa955fd2857dedea53d1ab9ca3.php 第 6 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.010500s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.010548s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000933s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000961s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001485s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001528s ]
+
+[ 2017-09-08T08:52:54+08:00 ] 127.0.0.1 /cloud/index.php/Admin/login/verify.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000775s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001265s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001330s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001162s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001210s ]
+
+[ 2017-09-08T08:52:57+08:00 ] 127.0.0.1 /cloud/index.php/Admin/login/verify.html?1504831977177
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000009s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000654s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000802s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000839s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000968s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001015s ]
+
+[ 2017-09-08T08:52:59+08:00 ] 127.0.0.1 /cloud/index.php/Admin/login/login.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000009s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000543s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000642s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000678s ]
+SQL: SHOW COLUMNS FROM `cloud_member` [ RunTime:0.0040s ]
+SQL: SELECT `uid`,`user`,`org_id`,`h_id` FROM `cloud_member` WHERE `user` = 'ceshi' AND `password` = '36868f2f58d2ab890d352ace75b8184b' LIMIT 1   [ RunTime:0.0004s ]
+NOTIC: [8] A session had already been started - ignoring session_start() C:\xampp\htdocs\Cloud\App\Admin\Controller\LoginController.class.php 第 51 行.
+SQL: SHOW COLUMNS FROM `cloud_log` [ RunTime:0.0034s ]
+NOTIC: [8] A session had already been started - ignoring session_start() C:\xampp\htdocs\Cloud\App\Admin\Common\function.php 第 12 行.
+SQL: SHOW COLUMNS FROM `cloud_member` [ RunTime:0.0040s ]
+SQL: SELECT `user` FROM `cloud_member` WHERE `uid` = 4 LIMIT 1   [ RunTime:0.0003s ]
+SQL: INSERT INTO `cloud_log` (`name`,`t`,`ip`,`log`) VALUES ('ceshi','1504831979','127.0.0.1','登录成功。') [ RunTime:0.0014s ]
+
+[ 2017-09-08T08:53:00+08:00 ] 127.0.0.1 /cloud/index.php/Admin/index/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000009s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000580s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000647s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000686s ]
+NOTIC: [8] A session had already been started - ignoring session_start() C:\xampp\htdocs\Cloud\App\Admin\Controller\ComController.class.php 第 118 行.
+SQL: SHOW COLUMNS FROM `cloud_member` [ RunTime:0.0042s ]
+SQL: SELECT * FROM `cloud_member` WHERE `uid` = 4 LIMIT 1   [ RunTime:0.0007s ]
+SQL: SELECT * FROM cloud_auth_group g left join cloud_auth_group_access a on g.id=a.group_id where a.uid=4 [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `cloud_auth_group_access` [ RunTime:0.0048s ]
+SQL: SELECT `uid`,`group_id`,`title`,`rules` FROM cloud_auth_group_access a INNER JOIN cloud_auth_group g on a.group_id=g.id  WHERE ( a.uid='4' and g.status='1' )  [ RunTime:0.0007s ]
+SQL: SHOW COLUMNS FROM `cloud_auth_rule` [ RunTime:0.0064s ]
+SQL: SELECT `condition`,`name` FROM `cloud_auth_rule` WHERE `id` IN ('1','97','98','99','66','73','74','67','80','78','72','81','79','84','92','93','94','91','90','13','15','16','20','21','48','49','50','55') AND `type` = 1 AND `status` = 1  [ RunTime:0.0014s ]
+SQL: SHOW COLUMNS FROM `cloud_member` [ RunTime:0.0067s ]
+SQL: SELECT * FROM `cloud_member` WHERE `uid` = 4 LIMIT 1   [ RunTime:0.0006s ]
+SQL: SELECT title FROM cloud_auth_group_access ga LEFT JOIN cloud_auth_group g ON ga.group_id=g.id where uid=4 [ RunTime:0.0006s ]
+SQL: SELECT s.id,s.title,s.name,s.tips,s.pid,p.pid as ppid,p.title as ptitle FROM cloud_auth_rule s left join cloud_auth_rule p on p.id=s.pid where s.name='Index/index' [ RunTime:0.0007s ]
+SQL: SHOW COLUMNS FROM `cloud_auth_rule` [ RunTime:0.0067s ]
+SQL: SELECT `id`,`title`,`pid`,`name`,`icon` FROM `cloud_auth_rule` WHERE ( islink=1 AND id in (1,97,98,99,66,73,74,67,80,78,72,81,79,84,92,93,94,91,90,13,15,16,20,21,48,49,50,55)  ) ORDER BY o ASC  [ RunTime:0.0010s ]
+SQL: SELECT SUM(s.num) AS nums, o.org_id, o.h_id, s.*, m.menu_name FROM cloud_order o INNER JOIN cloud_order_sub s ON s.oid = o.id INNER JOIN cloud_cook_menu m ON m.id=s.menu_id WHERE o.org_id = 2 Group by menu_id ORDER BY nums DESC [ RunTime:0.0016s ]
+SQL: SELECT SUM(nums) nums FROM(SELECT SUM(s.num) AS nums, o.org_id, o.h_id, s.*, m.menu_name FROM cloud_order o INNER JOIN cloud_order_sub s ON s.oid = o.id INNER JOIN cloud_cook_menu m ON m.id=s.menu_id WHERE o.org_id = 2 Group by menu_id ORDER BY nums DESC LIMIT 5,18) AS A [ RunTime:0.0014s ]
+NOTIC: [2] Missing argument 1 for Admin\Model\StatisModel::getTotalByMonthByOrg(), called in C:\xampp\htdocs\Cloud\App\Admin\Controller\IndexController.class.php on line 20 and defined C:\xampp\htdocs\Cloud\App\Admin\Model\StatisModel.class.php 第 71 行.
+NOTIC: [8] Undefined variable: year C:\xampp\htdocs\Cloud\App\Admin\Model\StatisModel.class.php 第 72 行.
+SQL: SELECT IFNULL(h_name,'合计') AS h_name,
+      SUM(IF(year='201701',count,0)) AS month01,
+      SUM(IF(year='201702',count,0)) AS month02,
+      SUM(IF(year='201703',count,0)) AS month03,
+      SUM(IF(year='201704',count,0)) AS month04,
+      SUM(IF(year='201705',count,0)) AS month05,
+      SUM(IF(year='201706',count,0)) AS month06,
+      SUM(IF(year='201707',count,0)) AS month07,
+      SUM(IF(year='201708',count,0)) AS month08,
+      SUM(IF(year='201709',count,0)) AS month09,
+      SUM(IF(year='201710',count,0)) AS month10,
+      SUM(IF(year='{November}',count,0)) AS month11,
+      SUM(IF(year='201712',count,0)) AS month12,
+      SUM(IF(year='total',count,0)) AS total
+      FROM(
+          SELECT h_name,IFNULL(year,'total') AS year,SUM(count) AS count
+          FROM(
+            SELECT h_name,FROM_UNIXTIME(order_time,'%Y%m')as year,SUM(o.total_money) count
+            FROM cloud_order o
+            JOIN cloud_hotel h ON h.id = o.h_id
+            WHERE FROM_UNIXTIME(order_time,'%Y') = 2017
+            GROUP BY h_name,year
+            ) AS A
+          GROUP BY h_name,year
+          WITH ROLLUP
+          HAVING h_name IS NOT NULL
+            )AS B
+      GROUP BY h_name
+      WITH ROLLUP [ RunTime:0.0009s ]
+SQL: SELECT SUM(s.num) AS nums, o.org_id, o.h_id, s.*, m.menu_name FROM cloud_order o INNER JOIN cloud_order_sub s ON s.oid = o.id INNER JOIN cloud_cook_menu m ON m.id=s.menu_id WHERE o.org_id = 2 Group by menu_id ORDER BY nums DESC LIMIT 100 [ RunTime:0.0013s ]
+SQL: SELECT SUM(total_money) AS money, h.org_id,h.h_name FROM cloud_hotel h INNER JOIN cloud_order o ON o.h_id = h.id  WHERE h.org_id = 2 GROUP BY o.h_id ORDER BY money DESC LIMIT 1 [ RunTime:0.0004s ]
+SQL: SELECT COUNT(s.id) AS nums, o.org_id, o.h_id, s.* ,m.menu_name FROM cloud_order o INNER JOIN cloud_order_sub s ON s.oid = o.id INNER JOIN cloud_cook_menu m ON m.id=s.menu_id WHERE o.org_id = 2 Group by menu_id ORDER BY nums ASC LIMIT 1 [ RunTime:0.0014s ]
+SQL: SELECT SUM(total_money) AS money, h.org_id,h.h_name FROM cloud_hotel h INNER JOIN cloud_order o ON o.h_id = h.id  WHERE h.org_id = 2 GROUP BY o.h_id ORDER BY money ASC LIMIT 1 [ RunTime:0.0006s ]
+NOTIC: [2048] Declaration of Admin\Model\OrgModel::save() should be compatible with Think\Model::save($data = '', $options = Array) C:\xampp\htdocs\Cloud\App\Admin\Model\OrgModel.class.php 第 66 行.
+NOTIC: [2048] Declaration of Admin\Model\OrgModel::delete() should be compatible with Think\Model::delete($options = Array) C:\xampp\htdocs\Cloud\App\Admin\Model\OrgModel.class.php 第 66 行.
+SQL: SHOW COLUMNS FROM `cloud_org` [ RunTime:0.0041s ]
+SQL: SHOW COLUMNS FROM `cloud_hotel` [ RunTime:0.0037s ]
+SQL: SELECT * FROM `cloud_hotel` WHERE ( org_id=2 )  [ RunTime:0.0004s ]
+SQL: SELECT * FROM `cloud_member` WHERE ( uid = 4 ) LIMIT 1   [ RunTime:0.0004s ]
+NOTIC: [8] Undefined variable: data C:\xampp\htdocs\Cloud\App\Admin\Controller\IndexController.class.php 第 60 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000135s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000176s ]
+NOTIC: [8] Use of undefined constant menu_name - assumed 'menu_name' C:\xampp\htdocs\Cloud\App\Runtime\Cache\Admin\742c860896b25e88c1c65c533911b85d.php 第 426 行.
+NOTIC: [8] Use of undefined constant h_name - assumed 'h_name' C:\xampp\htdocs\Cloud\App\Runtime\Cache\Admin\742c860896b25e88c1c65c533911b85d.php 第 434 行.
+NOTIC: [8] Use of undefined constant menu_name - assumed 'menu_name' C:\xampp\htdocs\Cloud\App\Runtime\Cache\Admin\742c860896b25e88c1c65c533911b85d.php 第 556 行.
+NOTIC: [8] Use of undefined constant menu_name - assumed 'menu_name' C:\xampp\htdocs\Cloud\App\Runtime\Cache\Admin\742c860896b25e88c1c65c533911b85d.php 第 557 行.
+NOTIC: [8] Use of undefined constant menu_name - assumed 'menu_name' C:\xampp\htdocs\Cloud\App\Runtime\Cache\Admin\742c860896b25e88c1c65c533911b85d.php 第 558 行.
+NOTIC: [8] Use of undefined constant menu_name - assumed 'menu_name' C:\xampp\htdocs\Cloud\App\Runtime\Cache\Admin\742c860896b25e88c1c65c533911b85d.php 第 559 行.
+NOTIC: [8] Use of undefined constant menu_name - assumed 'menu_name' C:\xampp\htdocs\Cloud\App\Runtime\Cache\Admin\742c860896b25e88c1c65c533911b85d.php 第 560 行.
+NOTIC: [8] Use of undefined constant menu_name - assumed 'menu_name' C:\xampp\htdocs\Cloud\App\Runtime\Cache\Admin\742c860896b25e88c1c65c533911b85d.php 第 561 行.
+NOTIC: [8] Use of undefined constant nums - assumed 'nums' C:\xampp\htdocs\Cloud\App\Runtime\Cache\Admin\742c860896b25e88c1c65c533911b85d.php 第 568 行.
+NOTIC: [8] Use of undefined constant nums - assumed 'nums' C:\xampp\htdocs\Cloud\App\Runtime\Cache\Admin\742c860896b25e88c1c65c533911b85d.php 第 569 行.
+NOTIC: [8] Use of undefined constant nums - assumed 'nums' C:\xampp\htdocs\Cloud\App\Runtime\Cache\Admin\742c860896b25e88c1c65c533911b85d.php 第 570 行.
+NOTIC: [8] Use of undefined constant nums - assumed 'nums' C:\xampp\htdocs\Cloud\App\Runtime\Cache\Admin\742c860896b25e88c1c65c533911b85d.php 第 571 行.
+NOTIC: [8] Use of undefined constant nums - assumed 'nums' C:\xampp\htdocs\Cloud\App\Runtime\Cache\Admin\742c860896b25e88c1c65c533911b85d.php 第 572 行.
+NOTIC: [8] Use of undefined constant nums - assumed 'nums' C:\xampp\htdocs\Cloud\App\Runtime\Cache\Admin\742c860896b25e88c1c65c533911b85d.php 第 573 行.
+NOTIC: [8] Use of undefined constant nums - assumed 'nums' C:\xampp\htdocs\Cloud\App\Runtime\Cache\Admin\742c860896b25e88c1c65c533911b85d.php 第 574 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.023933s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.023992s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000797s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000825s ]
+
+[ 2017-09-08T08:53:03+08:00 ] 127.0.0.1 /cloud/index.php/Admin/Cook/menuList.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000009s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000599s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001034s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001070s ]
+NOTIC: [8] A session had already been started - ignoring session_start() C:\xampp\htdocs\Cloud\App\Admin\Controller\ComController.class.php 第 118 行.
+SQL: SHOW COLUMNS FROM `cloud_member` [ RunTime:0.0045s ]
+SQL: SELECT * FROM `cloud_member` WHERE `uid` = 4 LIMIT 1   [ RunTime:0.0004s ]
+SQL: SELECT * FROM cloud_auth_group g left join cloud_auth_group_access a on g.id=a.group_id where a.uid=4 [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `cloud_auth_group_access` [ RunTime:0.0041s ]
+SQL: SELECT `uid`,`group_id`,`title`,`rules` FROM cloud_auth_group_access a INNER JOIN cloud_auth_group g on a.group_id=g.id  WHERE ( a.uid='4' and g.status='1' )  [ RunTime:0.0005s ]
+SQL: SHOW COLUMNS FROM `cloud_auth_rule` [ RunTime:0.0037s ]
+SQL: SELECT `condition`,`name` FROM `cloud_auth_rule` WHERE `id` IN ('1','97','98','99','66','73','74','67','80','78','72','81','79','84','92','93','94','91','90','13','15','16','20','21','48','49','50','55') AND `type` = 1 AND `status` = 1  [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `cloud_member` [ RunTime:0.0068s ]
+SQL: SELECT * FROM `cloud_member` WHERE `uid` = 4 LIMIT 1   [ RunTime:0.0008s ]
+SQL: SELECT title FROM cloud_auth_group_access ga LEFT JOIN cloud_auth_group g ON ga.group_id=g.id where uid=4 [ RunTime:0.0008s ]
+SQL: SELECT s.id,s.title,s.name,s.tips,s.pid,p.pid as ppid,p.title as ptitle FROM cloud_auth_rule s left join cloud_auth_rule p on p.id=s.pid where s.name='Cook/menuList' [ RunTime:0.0009s ]
+SQL: SHOW COLUMNS FROM `cloud_auth_rule` [ RunTime:0.0088s ]
+SQL: SELECT `id`,`title`,`pid`,`name`,`icon` FROM `cloud_auth_rule` WHERE ( islink=1 AND id in (1,97,98,99,66,73,74,67,80,78,72,81,79,84,92,93,94,91,90,13,15,16,20,21,48,49,50,55)  ) ORDER BY o ASC  [ RunTime:0.0013s ]
+NOTIC: [2048] Declaration of Admin\Model\CookModel::add() should be compatible with Think\Model::add($data = '', $options = Array, $replace = false) C:\xampp\htdocs\Cloud\App\Admin\Model\CookModel.class.php 第 135 行.
+NOTIC: [2048] Declaration of Admin\Model\CookModel::save() should be compatible with Think\Model::save($data = '', $options = Array) C:\xampp\htdocs\Cloud\App\Admin\Model\CookModel.class.php 第 135 行.
+SQL: SELECT m.*, s.style_name FROM cloud_cook_menu m
+       LEFT JOIN cloud_cook_style s ON s.id=m.style_id
+       WHERE m.org_id=2 AND m.is_delete = 0 order by edit_time desc [ RunTime:0.0018s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000151s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000205s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.029789s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.029874s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001565s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001614s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001293s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001341s ]
+
+[ 2017-09-08T08:53:06+08:00 ] 127.0.0.1 /cloud/index.php/Admin/Cook/editMenu/id/29.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000690s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001046s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001087s ]
+NOTIC: [8] A session had already been started - ignoring session_start() C:\xampp\htdocs\Cloud\App\Admin\Controller\ComController.class.php 第 118 行.
+SQL: SHOW COLUMNS FROM `cloud_member` [ RunTime:0.0110s ]
+SQL: SELECT * FROM `cloud_member` WHERE `uid` = 4 LIMIT 1   [ RunTime:0.0004s ]
+SQL: SELECT * FROM cloud_auth_group g left join cloud_auth_group_access a on g.id=a.group_id where a.uid=4 [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `cloud_auth_group_access` [ RunTime:0.0036s ]
+SQL: SELECT `uid`,`group_id`,`title`,`rules` FROM cloud_auth_group_access a INNER JOIN cloud_auth_group g on a.group_id=g.id  WHERE ( a.uid='4' and g.status='1' )  [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `cloud_auth_rule` [ RunTime:0.0043s ]
+SQL: SELECT `condition`,`name` FROM `cloud_auth_rule` WHERE `id` IN ('1','97','98','99','66','73','74','67','80','78','72','81','79','84','92','93','94','91','90','13','15','16','20','21','48','49','50','55') AND `type` = 1 AND `status` = 1  [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `cloud_member` [ RunTime:0.0038s ]
+SQL: SELECT * FROM `cloud_member` WHERE `uid` = 4 LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT title FROM cloud_auth_group_access ga LEFT JOIN cloud_auth_group g ON ga.group_id=g.id where uid=4 [ RunTime:0.0003s ]
+SQL: SELECT s.id,s.title,s.name,s.tips,s.pid,p.pid as ppid,p.title as ptitle FROM cloud_auth_rule s left join cloud_auth_rule p on p.id=s.pid where s.name='Cook/editMenu' [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `cloud_auth_rule` [ RunTime:0.0074s ]
+SQL: SELECT `id`,`title`,`pid`,`name`,`icon` FROM `cloud_auth_rule` WHERE ( islink=1 AND id in (1,97,98,99,66,73,74,67,80,78,72,81,79,84,92,93,94,91,90,13,15,16,20,21,48,49,50,55)  ) ORDER BY o ASC  [ RunTime:0.0014s ]
+NOTIC: [2048] Declaration of Admin\Model\CookModel::add() should be compatible with Think\Model::add($data = '', $options = Array, $replace = false) C:\xampp\htdocs\Cloud\App\Admin\Model\CookModel.class.php 第 135 行.
+NOTIC: [2048] Declaration of Admin\Model\CookModel::save() should be compatible with Think\Model::save($data = '', $options = Array) C:\xampp\htdocs\Cloud\App\Admin\Model\CookModel.class.php 第 135 行.
+SQL: SHOW COLUMNS FROM `cloud_cook_style` [ RunTime:0.0088s ]
+SQL: SELECT * FROM `cloud_cook_style` WHERE `org_id` = 2 AND `is_delete` = 0 ORDER BY edit_time desc  [ RunTime:0.0009s ]
+SQL: SHOW COLUMNS FROM `cloud_cook_menu` [ RunTime:0.0084s ]
+SQL: SELECT * FROM `cloud_cook_menu` WHERE ( id=29 ) LIMIT 1   [ RunTime:0.0005s ]
+SQL: SELECT * FROM `cloud_cook_style` WHERE ( id =8 ) LIMIT 1   [ RunTime:0.0004s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000155s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000209s ]
+NOTIC: [8] Undefined variable: val C:\xampp\htdocs\Cloud\App\Runtime\Cache\Admin\8243f004f3e2f7bffa302aa34eb72491.php 第 418 行.
+NOTIC: [8] Undefined variable: val C:\xampp\htdocs\Cloud\App\Runtime\Cache\Admin\8243f004f3e2f7bffa302aa34eb72491.php 第 418 行.
+NOTIC: [8] Undefined variable: val C:\xampp\htdocs\Cloud\App\Runtime\Cache\Admin\8243f004f3e2f7bffa302aa34eb72491.php 第 418 行.
+NOTIC: [8] Undefined variable: val C:\xampp\htdocs\Cloud\App\Runtime\Cache\Admin\8243f004f3e2f7bffa302aa34eb72491.php 第 418 行.
+NOTIC: [8] Undefined variable: val C:\xampp\htdocs\Cloud\App\Runtime\Cache\Admin\8243f004f3e2f7bffa302aa34eb72491.php 第 418 行.
+NOTIC: [8] Undefined variable: val C:\xampp\htdocs\Cloud\App\Runtime\Cache\Admin\8243f004f3e2f7bffa302aa34eb72491.php 第 418 行.
+NOTIC: [8] Undefined variable: val C:\xampp\htdocs\Cloud\App\Runtime\Cache\Admin\8243f004f3e2f7bffa302aa34eb72491.php 第 418 行.
+NOTIC: [8] Undefined variable: val C:\xampp\htdocs\Cloud\App\Runtime\Cache\Admin\8243f004f3e2f7bffa302aa34eb72491.php 第 418 行.
+NOTIC: [8] Undefined variable: val C:\xampp\htdocs\Cloud\App\Runtime\Cache\Admin\8243f004f3e2f7bffa302aa34eb72491.php 第 418 行.
+NOTIC: [8] Undefined variable: val C:\xampp\htdocs\Cloud\App\Runtime\Cache\Admin\8243f004f3e2f7bffa302aa34eb72491.php 第 418 行.
+NOTIC: [8] Undefined variable: val C:\xampp\htdocs\Cloud\App\Runtime\Cache\Admin\8243f004f3e2f7bffa302aa34eb72491.php 第 418 行.
+NOTIC: [8] Undefined variable: val C:\xampp\htdocs\Cloud\App\Runtime\Cache\Admin\8243f004f3e2f7bffa302aa34eb72491.php 第 418 行.
+NOTIC: [8] Undefined variable: val C:\xampp\htdocs\Cloud\App\Runtime\Cache\Admin\8243f004f3e2f7bffa302aa34eb72491.php 第 418 行.
+NOTIC: [8] Undefined variable: val C:\xampp\htdocs\Cloud\App\Runtime\Cache\Admin\8243f004f3e2f7bffa302aa34eb72491.php 第 418 行.
+NOTIC: [8] Undefined variable: val C:\xampp\htdocs\Cloud\App\Runtime\Cache\Admin\8243f004f3e2f7bffa302aa34eb72491.php 第 418 行.
+NOTIC: [8] Undefined variable: val C:\xampp\htdocs\Cloud\App\Runtime\Cache\Admin\8243f004f3e2f7bffa302aa34eb72491.php 第 418 行.
+NOTIC: [8] Undefined variable: data C:\xampp\htdocs\Cloud\App\Runtime\Cache\Admin\8243f004f3e2f7bffa302aa34eb72491.php 第 459 行.
+NOTIC: [8] Undefined variable: currentmenu C:\xampp\htdocs\Cloud\App\Runtime\Cache\Admin\8243f004f3e2f7bffa302aa34eb72491.php 第 493 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.025332s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.025382s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001291s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001333s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001208s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001265s ]
+
+[ 2017-09-08T08:53:06+08:00 ] 127.0.0.1 /cloud/index.php/Admin/Upload/uploadpic/Width/100/Height/100/BackCall/picture.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000573s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001559s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001631s ]
+NOTIC: [8] A session had already been started - ignoring session_start() C:\xampp\htdocs\Cloud\App\Admin\Controller\ComController.class.php 第 118 行.
+SQL: SHOW COLUMNS FROM `cloud_member` [ RunTime:0.0047s ]
+SQL: SELECT * FROM `cloud_member` WHERE `uid` = 4 LIMIT 1   [ RunTime:0.0005s ]
+SQL: SELECT * FROM cloud_auth_group g left join cloud_auth_group_access a on g.id=a.group_id where a.uid=4 [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `cloud_auth_group_access` [ RunTime:0.0043s ]
+SQL: SELECT `uid`,`group_id`,`title`,`rules` FROM cloud_auth_group_access a INNER JOIN cloud_auth_group g on a.group_id=g.id  WHERE ( a.uid='4' and g.status='1' )  [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `cloud_auth_rule` [ RunTime:0.0041s ]
+SQL: SELECT `condition`,`name` FROM `cloud_auth_rule` WHERE `id` IN ('1','97','98','99','66','73','74','67','80','78','72','81','79','84','92','93','94','91','90','13','15','16','20','21','48','49','50','55') AND `type` = 1 AND `status` = 1  [ RunTime:0.0005s ]
+SQL: SHOW COLUMNS FROM `cloud_member` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `cloud_member` WHERE `uid` = 4 LIMIT 1   [ RunTime:0.0004s ]
+SQL: SELECT title FROM cloud_auth_group_access ga LEFT JOIN cloud_auth_group g ON ga.group_id=g.id where uid=4 [ RunTime:0.0003s ]
+SQL: SELECT s.id,s.title,s.name,s.tips,s.pid,p.pid as ppid,p.title as ptitle FROM cloud_auth_rule s left join cloud_auth_rule p on p.id=s.pid where s.name='Upload/uploadpic' [ RunTime:0.0004s ]
+NOTIC: [8] Undefined offset: 0 C:\xampp\htdocs\Cloud\App\Admin\Controller\ComController.class.php 第 67 行.
+SQL: SHOW COLUMNS FROM `cloud_auth_rule` [ RunTime:0.0044s ]
+SQL: SELECT `id`,`title`,`pid`,`name`,`icon` FROM `cloud_auth_rule` WHERE ( islink=1 AND id in (1,97,98,99,66,73,74,67,80,78,72,81,79,84,92,93,94,91,90,13,15,16,20,21,48,49,50,55)  ) ORDER BY o ASC  [ RunTime:0.0009s ]
+NOTIC: [8] Undefined index: img C:\xampp\htdocs\Cloud\App\Admin\Controller\UploadController.class.php 第 27 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000041s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000081s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.008791s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.008846s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001510s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001549s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001346s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001392s ]
+
+[ 2017-09-08T08:53:10+08:00 ] 127.0.0.1 /cloud/index.php/Admin/Upload/uploadpic/Width/100/Height/100/BackCall/picture.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000615s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001088s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001126s ]
+NOTIC: [8] A session had already been started - ignoring session_start() C:\xampp\htdocs\Cloud\App\Admin\Controller\ComController.class.php 第 118 行.
+SQL: SHOW COLUMNS FROM `cloud_member` [ RunTime:0.0045s ]
+SQL: SELECT * FROM `cloud_member` WHERE `uid` = 4 LIMIT 1   [ RunTime:0.0004s ]
+SQL: SELECT * FROM cloud_auth_group g left join cloud_auth_group_access a on g.id=a.group_id where a.uid=4 [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `cloud_auth_group_access` [ RunTime:0.0050s ]
+SQL: SELECT `uid`,`group_id`,`title`,`rules` FROM cloud_auth_group_access a INNER JOIN cloud_auth_group g on a.group_id=g.id  WHERE ( a.uid='4' and g.status='1' )  [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `cloud_auth_rule` [ RunTime:0.0034s ]
+SQL: SELECT `condition`,`name` FROM `cloud_auth_rule` WHERE `id` IN ('1','97','98','99','66','73','74','67','80','78','72','81','79','84','92','93','94','91','90','13','15','16','20','21','48','49','50','55') AND `type` = 1 AND `status` = 1  [ RunTime:0.0005s ]
+SQL: SHOW COLUMNS FROM `cloud_member` [ RunTime:0.0035s ]
+SQL: SELECT * FROM `cloud_member` WHERE `uid` = 4 LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT title FROM cloud_auth_group_access ga LEFT JOIN cloud_auth_group g ON ga.group_id=g.id where uid=4 [ RunTime:0.0003s ]
+SQL: SELECT s.id,s.title,s.name,s.tips,s.pid,p.pid as ppid,p.title as ptitle FROM cloud_auth_rule s left join cloud_auth_rule p on p.id=s.pid where s.name='Upload/uploadpic' [ RunTime:0.0003s ]
+NOTIC: [8] Undefined offset: 0 C:\xampp\htdocs\Cloud\App\Admin\Controller\ComController.class.php 第 67 行.
+SQL: SHOW COLUMNS FROM `cloud_auth_rule` [ RunTime:0.0044s ]
+SQL: SELECT `id`,`title`,`pid`,`name`,`icon` FROM `cloud_auth_rule` WHERE ( islink=1 AND id in (1,97,98,99,66,73,74,67,80,78,72,81,79,84,92,93,94,91,90,13,15,16,20,21,48,49,50,55)  ) ORDER BY o ASC  [ RunTime:0.0009s ]
+NOTIC: [2] call_user_func() expects parameter 1 to be a valid callback, no array or string given C:\xampp\htdocs\Cloud\ThinkPHP\Library\Think\Upload.class.php 第 170 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000042s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000085s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.007814s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.007898s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000954s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000984s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001075s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001107s ]
+
+[ 2017-09-08T08:53:13+08:00 ] 127.0.0.1 /cloud/index.php/Admin/Cook/editMenu.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000009s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000600s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001085s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001121s ]
+NOTIC: [8] A session had already been started - ignoring session_start() C:\xampp\htdocs\Cloud\App\Admin\Controller\ComController.class.php 第 118 行.
+SQL: SHOW COLUMNS FROM `cloud_member` [ RunTime:0.0103s ]
+SQL: SELECT * FROM `cloud_member` WHERE `uid` = 4 LIMIT 1   [ RunTime:0.0004s ]
+SQL: SELECT * FROM cloud_auth_group g left join cloud_auth_group_access a on g.id=a.group_id where a.uid=4 [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `cloud_auth_group_access` [ RunTime:0.0040s ]
+SQL: SELECT `uid`,`group_id`,`title`,`rules` FROM cloud_auth_group_access a INNER JOIN cloud_auth_group g on a.group_id=g.id  WHERE ( a.uid='4' and g.status='1' )  [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `cloud_auth_rule` [ RunTime:0.0033s ]
+SQL: SELECT `condition`,`name` FROM `cloud_auth_rule` WHERE `id` IN ('1','97','98','99','66','73','74','67','80','78','72','81','79','84','92','93','94','91','90','13','15','16','20','21','48','49','50','55') AND `type` = 1 AND `status` = 1  [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `cloud_member` [ RunTime:0.0039s ]
+SQL: SELECT * FROM `cloud_member` WHERE `uid` = 4 LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT title FROM cloud_auth_group_access ga LEFT JOIN cloud_auth_group g ON ga.group_id=g.id where uid=4 [ RunTime:0.0003s ]
+SQL: SELECT s.id,s.title,s.name,s.tips,s.pid,p.pid as ppid,p.title as ptitle FROM cloud_auth_rule s left join cloud_auth_rule p on p.id=s.pid where s.name='Cook/editMenu' [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `cloud_auth_rule` [ RunTime:0.0040s ]
+SQL: SELECT `id`,`title`,`pid`,`name`,`icon` FROM `cloud_auth_rule` WHERE ( islink=1 AND id in (1,97,98,99,66,73,74,67,80,78,72,81,79,84,92,93,94,91,90,13,15,16,20,21,48,49,50,55)  ) ORDER BY o ASC  [ RunTime:0.0006s ]
+NOTIC: [2048] Declaration of Admin\Model\CookModel::add() should be compatible with Think\Model::add($data = '', $options = Array, $replace = false) C:\xampp\htdocs\Cloud\App\Admin\Model\CookModel.class.php 第 135 行.
+NOTIC: [2048] Declaration of Admin\Model\CookModel::save() should be compatible with Think\Model::save($data = '', $options = Array) C:\xampp\htdocs\Cloud\App\Admin\Model\CookModel.class.php 第 135 行.
+SQL: SHOW COLUMNS FROM `cloud_org` [ RunTime:0.0059s ]
+SQL: UPDATE `cloud_org` SET `org_menu_version`='1504831992' WHERE `id` = 2 [ RunTime:0.0075s ]
+SQL: SHOW COLUMNS FROM `cloud_cook_menu` [ RunTime:0.0072s ]
+SQL: UPDATE `cloud_cook_menu` SET `menu_name`='原盅椰子雨花石汤圆',`style_id`='8',`price`='78.00',`standard`='份',`picture`='/cloud/Public/attached/2017/09/08/59b1e9f669b4d.png',`introduce`='',`remark`='',`edit_time`='1504831992' WHERE ( id=29 ) [ RunTime:0.0058s ]
+NOTIC: [8] Undefined variable: url C:\xampp\htdocs\Cloud\App\Admin\Model\CookModel.class.php 第 119 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000083s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000203s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.021811s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.021959s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.003017s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.003123s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.003800s ]
+INFO: [ app_end ] --END-- [ RunTime:0.003932s ]
+
+[ 2017-09-08T08:53:14+08:00 ] 127.0.0.1 /cloud/index.php/Admin/Cook/menuList
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000021s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000856s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001633s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001694s ]
+NOTIC: [8] A session had already been started - ignoring session_start() C:\xampp\htdocs\Cloud\App\Admin\Controller\ComController.class.php 第 118 行.
+SQL: SHOW COLUMNS FROM `cloud_member` [ RunTime:0.0192s ]
+SQL: SELECT * FROM `cloud_member` WHERE `uid` = 4 LIMIT 1   [ RunTime:0.0009s ]
+SQL: SELECT * FROM cloud_auth_group g left join cloud_auth_group_access a on g.id=a.group_id where a.uid=4 [ RunTime:0.0007s ]
+SQL: SHOW COLUMNS FROM `cloud_auth_group_access` [ RunTime:0.0085s ]
+SQL: SELECT `uid`,`group_id`,`title`,`rules` FROM cloud_auth_group_access a INNER JOIN cloud_auth_group g on a.group_id=g.id  WHERE ( a.uid='4' and g.status='1' )  [ RunTime:0.0008s ]
+SQL: SHOW COLUMNS FROM `cloud_auth_rule` [ RunTime:0.0074s ]
+SQL: SELECT `condition`,`name` FROM `cloud_auth_rule` WHERE `id` IN ('1','97','98','99','66','73','74','67','80','78','72','81','79','84','92','93','94','91','90','13','15','16','20','21','48','49','50','55') AND `type` = 1 AND `status` = 1  [ RunTime:0.0009s ]
+SQL: SHOW COLUMNS FROM `cloud_member` [ RunTime:0.0065s ]
+SQL: SELECT * FROM `cloud_member` WHERE `uid` = 4 LIMIT 1   [ RunTime:0.0004s ]
+SQL: SELECT title FROM cloud_auth_group_access ga LEFT JOIN cloud_auth_group g ON ga.group_id=g.id where uid=4 [ RunTime:0.0004s ]
+SQL: SELECT s.id,s.title,s.name,s.tips,s.pid,p.pid as ppid,p.title as ptitle FROM cloud_auth_rule s left join cloud_auth_rule p on p.id=s.pid where s.name='Cook/menuList' [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `cloud_auth_rule` [ RunTime:0.0045s ]
+SQL: SELECT `id`,`title`,`pid`,`name`,`icon` FROM `cloud_auth_rule` WHERE ( islink=1 AND id in (1,97,98,99,66,73,74,67,80,78,72,81,79,84,92,93,94,91,90,13,15,16,20,21,48,49,50,55)  ) ORDER BY o ASC  [ RunTime:0.0007s ]
+NOTIC: [2048] Declaration of Admin\Model\CookModel::add() should be compatible with Think\Model::add($data = '', $options = Array, $replace = false) C:\xampp\htdocs\Cloud\App\Admin\Model\CookModel.class.php 第 135 行.
+NOTIC: [2048] Declaration of Admin\Model\CookModel::save() should be compatible with Think\Model::save($data = '', $options = Array) C:\xampp\htdocs\Cloud\App\Admin\Model\CookModel.class.php 第 135 行.
+SQL: SELECT m.*, s.style_name FROM cloud_cook_menu m
+       LEFT JOIN cloud_cook_style s ON s.id=m.style_id
+       WHERE m.org_id=2 AND m.is_delete = 0 order by edit_time desc [ RunTime:0.0008s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000115s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000167s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.020323s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.020363s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000941s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000971s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001247s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001293s ]
+
+[ 2017-09-08T09:04:03+08:00 ] 127.0.0.1 /cloud/index.php/Admin/Cook/menuList
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000676s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001929s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001978s ]
+NOTIC: [8] A session had already been started - ignoring session_start() C:\xampp\htdocs\Cloud\App\Admin\Controller\ComController.class.php 第 118 行.
+ERR: SQLSTATE[HY000] [2002] ����Ŀ�����������ܾ����޷����ӡ�
+
+

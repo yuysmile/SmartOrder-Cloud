@@ -1,0 +1,50 @@
+[ 2017-09-07T16:49:26+08:00 ] 127.0.0.1 /Cloud/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000642s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000883s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000919s ]
+ERR: SQLSTATE[HY000] [2002] 由于目标计算机积极拒绝，无法连接。
+
+
+[ 2017-09-07T16:50:06+08:00 ] 127.0.0.1 /Cloud/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000009s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000592s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000963s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+ERR: SQLSTATE[HY000] [2002] 由于目标计算机积极拒绝，无法连接。
+
+
+[ 2017-09-07T16:52:48+08:00 ] 127.0.0.1 /Cloud/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000009s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000562s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001077s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001122s ]
+ERR: SQLSTATE[HY000] [2002] 由于目标计算机积极拒绝，无法连接。
+
+
+[ 2017-09-07T16:52:57+08:00 ] 127.0.0.1 /Cloud/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000553s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001177s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001238s ]
+ERR: SQLSTATE[HY000] [2002] 由于目标计算机积极拒绝，无法连接。
+
+
+[ 2017-09-07T16:53:08+08:00 ] 127.0.0.1 /Cloud/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000009s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000514s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000692s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000727s ]
+ERR: SQLSTATE[HY000] [2002] 由于目标计算机积极拒绝，无法连接。
+
+
